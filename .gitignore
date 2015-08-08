@@ -1,0 +1,5 @@
+gtk-2.0
+gconf
+ImageMagick
+chromium
+**/node_modules

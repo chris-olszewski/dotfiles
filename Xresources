@@ -1,0 +1,32 @@
+! colors
+*color0: #484363
+*color1: #695d73
+*color2: #2b2b47
+*color3: #612a30
+*color4: #af3e40
+*color5: #942021
+*color6: #ea3d2c
+*color7: #d85356
+*color8: #b96a6f
+*color9: #7e494f
+*color10: #a2838b
+*color11: #a7a3b2
+*color12: #d5957a
+*color13: #d31e0b
+*color14: #f46d1b
+*color15: #d2b6c5
+
+! defaults
+! color6
+*.foreground: #ea3d2c
+! color0
+*.background: [0]#484363
+
+
+! Urxvrt
+URxvt*.depth: 32
+URxvt.scrollBar: false
+URxvt*.transparent: true
+URxvt*.shading: 100
+URxvt*.font: xft:terminus:size=8
+URxvt*.blurRadius: 10x10
