@@ -34,8 +34,8 @@ def append_output(title, action):
   results = json.loads(resultStr.value)
   if len(results) < 2:
     results.append(create_result(title, action))
-  else: # ignore the bottom two default options
-    results.insert(-2, create_result(title, action))
+  else: # I prefer to see the execute function first
+    results.insert(2, create_result(title, action))
   resultStr.value = json.dumps(results)
 
 def prepend_output(title, action):
