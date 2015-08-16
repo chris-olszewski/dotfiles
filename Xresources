@@ -22,11 +22,7 @@
 ! color0
 *.background: [0]#484363
 
-
 ! Urxvrt
 URxvt*.depth: 32
 URxvt.scrollBar: false
-URxvt*.transparent: true
-URxvt*.shading: 100
-URxvt*.font: xft:terminus:size=8
-URxvt*.blurRadius: 10x10
+!URxvt*.font: xft:terminus
