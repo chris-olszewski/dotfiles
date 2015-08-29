@@ -20,9 +20,10 @@
 ! color6
 *.foreground: #ea3d2c
 ! color0
-*.background: [0]#484363
+*.background: #484363
 
 ! Urxvrt
 URxvt*.depth: 32
+URxvt.background: [0]#484363
 URxvt.scrollBar: false
 !URxvt*.font: xft:terminus
