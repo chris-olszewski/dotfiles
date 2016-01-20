@@ -1,2 +1,0 @@
-#! /bin/bash
-/home/chris/.nvm/versions/node/v0.12.7/bin/node --harmony .config/lemonbar/index.js | lemonbar -g 1260x20+10+6 -B \#ff484363 -F \#ffea3d2c

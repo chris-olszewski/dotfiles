@@ -81,7 +81,7 @@ super + Return
 	urxvt
 
 super + space
-	lighthouse | bash
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
