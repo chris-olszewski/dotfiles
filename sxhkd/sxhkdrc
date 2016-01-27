@@ -81,8 +81,7 @@ super + Return
 	urxvt
 
 super + space
-	dmenu_run
-
+	dmenu_run -nf "#c1ec83" -nb "#515151" -sb "#39b543" -fn terminus
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

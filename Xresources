@@ -25,4 +25,4 @@
 ! Urxvrt
 URxvt.background: [100]#515151
 URxvt.scrollBar: false
-!URxvt*.font: xft:terminus
+URxvt*.font: xft:terminus:size=8
