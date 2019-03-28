@@ -40,3 +40,4 @@ EDITOR=vim
 
 # Update path
 PATH="$PATH:$HOME/.emacs.d/bin"
+PATH="$PATH:$HOME/.local/bin"

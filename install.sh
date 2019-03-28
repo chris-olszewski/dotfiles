@@ -25,3 +25,9 @@ done
 # Oddball
 ln -sfT "$DIR/xmonad.hs" "$HOME/.xmonad/xmonad.hs"
 ln -sfT "$DIR/doom/" "$HOME/.doom.d"
+
+if [[ ! -f "$HOME/.stack" ]]; then
+    echo Setting up stack config
+    ln -sfT "$DIR/stack/config.yaml" "$HOME/.stack/config.yaml"
+    ln -sfT "$DIR/stack/global-stack.yaml" "$HOME/.stack/global-project/stack.yaml"
+fi
