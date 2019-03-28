@@ -1,0 +1,40 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+###
+# General Options
+###
+
+# Readline config
+set -o vi
+
+# Auto cd when a directory is entered
+# e.g. /tmp -> cd /tmp
+shopt -s autocd
+
+# Immediately update bash history
+shopt -s histappend
+PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
+
+###
+# Aliases
+###
+
+alias ls='ls --color=auto'
+
+
+###
+# Variables
+###
+
+PS1='[$? \u@\h \W]\$ '
+HISTSIZE=100000
+VISUAL=vim
+EDITOR=vim
+
+# Update path
+PATH="$PATH:$HOME/.emacs.d/bin"

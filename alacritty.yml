@@ -1,0 +1,25 @@
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 0
+    lines: 0
+
+scrolling:
+  history: 10000
+  multiplier: 3
+  faux_multiplier: 3
+
+selection:
+  # Use X clipboard
+  # C-C copy, C-V paste
+  save_to_clipboard: true
+
+font:
+  # Note not using bold as weird spacing issues were being caused
+  normal:
+    family: "Fira Mono"
+  size: 9.0
+
+  draw_bold_text_with_bright_colors: true
