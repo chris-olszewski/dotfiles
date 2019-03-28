@@ -25,6 +25,8 @@ PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
 ###
 
 alias ls='ls --color=auto'
+# fd is quite a bit easier to use
+alias find='fd'
 
 
 ###
