@@ -20,6 +20,11 @@ shopt -s autocd
 shopt -s histappend
 PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
 
+COMMAND_NOT_FOUND_HOOK=/usr/share/doc/pkgfile/command-not-found.bash
+if [[ -e $COMMAND_NOT_FOUND_HOOK ]]; then
+    source $COMMAND_NOT_FOUND_HOOK
+fi
+
 ###
 # Aliases
 ###
