@@ -1,5 +1,4 @@
-gtk-2.0
-gconf
-ImageMagick
-chromium
-lemonbar/node_modules
+*.o
+*.hi
+xmonad/xmonad-x86_64-linux
+xmonad/xmonad.errors

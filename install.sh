@@ -23,7 +23,7 @@ for f in "${MISC_FILES[@]}"; do
 done
 
 # Oddball
-ln -sfT "$DIR/xmonad.hs" "$HOME/.xmonad/xmonad.hs"
+ln -sfT "$DIR/xmonad" "$HOME/.xmonad"
 ln -sfT "$DIR/doom/" "$HOME/.doom.d"
 
 if [[ -d "$HOME/.stack" ]]; then
