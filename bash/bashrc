@@ -40,8 +40,9 @@ alias find='fd'
 
 PS1='[$? \u@\h \W]\$ '
 HISTSIZE=100000
-VISUAL=vim
-EDITOR=vim
+VISUAL="emacsclient -a \"emacs --daemon\" -c"
+EDITOR="emacsclient -a \"emacs --daemon\" -c"
+GIT_EDITOR="emacsclient -a \"emacs --daemon\" -c"
 
 # Update path
 PATH="$PATH:$HOME/.emacs.d/bin"
