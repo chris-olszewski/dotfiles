@@ -20,6 +20,9 @@ shopt -s autocd
 shopt -s histappend
 PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
 
+# Don't allow foo > out.txt to overwrite out.txt if it exists
+shopt -o noclobber
+
 COMMAND_NOT_FOUND_HOOK=/usr/share/doc/pkgfile/command-not-found.bash
 if [[ -e $COMMAND_NOT_FOUND_HOOK ]]; then
     source $COMMAND_NOT_FOUND_HOOK
@@ -43,6 +46,7 @@ HISTSIZE=100000
 VISUAL="emacsclient -a \"emacs --daemon\" -c"
 EDITOR="emacsclient -a \"emacs --daemon\" -c"
 GIT_EDITOR="emacsclient -a \"emacs --daemon\" -c"
+RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Update path
 PATH="$PATH:$HOME/.emacs.d/bin"
