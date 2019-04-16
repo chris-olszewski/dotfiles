@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: match Ordering(...)
+# key:
+# --
+match $1 {
+      Ordering::Less => ${2:unimplemented!}(),
+      Ordering::Equal => ${3:unimplemented!()},
+      Ordering::Greater => ${4:unimplemented!()},
+}
