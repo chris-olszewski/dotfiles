@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BACKGROUND="$HOME/pictures/wallpaper/bladerunner.png"
+BACKGROUND="$HOME/pictures/wallpaper/rainroad.png"
 
 feh --bg-scale "$BACKGROUND"
 

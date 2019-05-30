@@ -6,6 +6,9 @@
 (setq doom-font (font-spec :family "Fira Mono" :size 12))
 (setq evil-escape-key-sequence "fd")
 
+;; If file starts with shebang sh open in sh-mode
+(add-to-list 'magic-mode-alist '("# .bashrc" . sh-mode))
+
 ;; Remove b prefix for default cargo bindings
 (after! rust-mode
   (map! :map rust-mode-map

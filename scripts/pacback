@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+set -e
+
+# Basic script to manage pacman package list backups
+BACKUP_DIR="$HOME/pacback"
+ROOT_BACKUP="/backup.tar.bz2"
+
+function backup {
+    mkdir -p $BACKUP_DIR
+    pushd $BACKUP_DIR > /dev/null
+    FILE="$(date -Iseconds).tar.bz2"
+    echo $FILE
+    tar cjf $BACKUP_DIR/$FILE /var/lib/pacman/local
+    popd > /dev/null
+}
+
+function restore {
+    # probably need to be root
+    FILE=$1
+    # prompt for y/n
+    cp $FILE $ROOT_BACKUP
+    pushd / > /dev/null
+    tar xjvf $ROOT_BACKUP
+    popd > /dev/null
+}
+
+SUBCMD=$1
+
+case $SUBCMD in
+    "backup") backup;;
+    "restore") restore $2;;
+    "list") ls $BACKUP_DIR;;
+    *) echo "unknown command";;
+esac

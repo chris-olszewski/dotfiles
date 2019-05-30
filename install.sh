@@ -17,6 +17,9 @@ for f in "${BASH_FILES[@]}"; do
 	ln -sfT "$DIR/bash/$f" "$HOME/.$f"
 done
 
+# Symlink scripts
+ln -sfT "$DIR/scripts/pacback" "$HOME/.local/bin/pacback"
+
 # Symlink Misc Files
 for f in "${MISC_FILES[@]}"; do
 	ln -sfT "$DIR/$f" "$HOME/.$f"
@@ -27,7 +30,6 @@ ln -sfT "$DIR/xmonad" "$HOME/.xmonad"
 ln -sfT "$DIR/doom/" "$HOME/.doom.d"
 
 if [[ -d "$HOME/.stack" ]]; then
-    echo Setting up stack config
     ln -sfT "$DIR/stack/config.yaml" "$HOME/.stack/config.yaml"
     ln -sfT "$DIR/stack/global-stack.yaml" "$HOME/.stack/global-project/stack.yaml"
 fi

@@ -5,6 +5,8 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.SpawnOn
 
+-- TODO: add binding to put a window into a "following" state
+--   	 i.e. a window that switches workspaces when user switches workspace
 borderDelta :: Int
 borderDelta = 3
 
