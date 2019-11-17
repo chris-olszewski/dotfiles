@@ -1,3 +1,6 @@
 [user]
   email = chrisdolszewski@gmail.com
   name = Chris Olszewski
+
+[core]
+  editor = 'emacsclient' -a 'emacs --daemon' -c

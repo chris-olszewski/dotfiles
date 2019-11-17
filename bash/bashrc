@@ -36,13 +36,14 @@ alias find='fd'
 # Variables
 ###
 
-PS1='[$? \u@\h \W]\$ '
-HISTSIZE=100000
-VISUAL="emacsclient -a \"emacs --daemon\" -c"
-EDITOR="emacsclient -a \"emacs --daemon\" -c"
-GIT_EDITOR="emacsclient -a \"emacs --daemon\" -c"
-RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export PS1='[$? \u@\h \W]\$ '
+export HISTSIZE=100000
+export VISUAL="emacsclient -a \"emacs --daemon\" -c"
+# Editor should point to an editor that doesn't require "advanced" features e.g. ed, vi, etc
+export EDITOR="vi -e"
+export GIT_EDITOR="emacsclient -a \"emacs --daemon\" -c"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Update path
-PATH="$PATH:$HOME/.emacs.d/bin"
-PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.emacs.d/bin"
+export PATH="$PATH:$HOME/.local/bin"
