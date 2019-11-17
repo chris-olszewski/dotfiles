@@ -17,6 +17,9 @@ customKeys = [ ("M-[", prevWS)
              , ("M-p", spawn "dmenu_run -nf '#eceff4' -nb '#5e81ac' -sb '#8fbcbb' -sf '#2e3440'")
              ]
 
+-- look at withFocused :: (Window -> X ()) -> X ()
+-- to set a window in this state
+
 
 myLayoutHook = spacing 15 $ layoutHook desktopConfig
 

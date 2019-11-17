@@ -10,7 +10,7 @@ function backup {
     pushd $BACKUP_DIR > /dev/null
     FILE="$(date -Iseconds).tar.bz2"
     echo $FILE
-    tar cjf $BACKUP_DIR/$FILE /var/lib/pacman/local
+    tar cjf "$BACKUP_DIR/$FILE" /var/lib/pacman/local
     popd > /dev/null
 }
 
@@ -18,7 +18,7 @@ function restore {
     # probably need to be root
     FILE=$1
     # prompt for y/n
-    cp $FILE $ROOT_BACKUP
+    cp "$FILE" $ROOT_BACKUP
     pushd / > /dev/null
     tar xjvf $ROOT_BACKUP
     popd > /dev/null
