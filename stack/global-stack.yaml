@@ -4,8 +4,11 @@
 # '/home/olszewski/.stack/config.yaml' instead.
 #
 # For more information about stack's configuration, see
-# http://docs.haskellstack.org/en/stable/yaml_configuration/
+# HTTP://docs.haskellstack.org/en/stable/yaml_configuration/
 #
 packages: []
 # Latest resolver with ghc-mod
-resolver: lts-9.21
+resolver: lts-14.15
+
+extra-deps:
+  - stm-2.5.0.0
