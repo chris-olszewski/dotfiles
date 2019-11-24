@@ -21,6 +21,12 @@
          :desc "cargo bench" "B" (λ! (compile "cargo bench"))
          :desc "cargo clippy" "C" (λ! (compile "cargo clippy"))))
 
+(after! haskell-mode
+  ;; Time before a var at cursors type is displayed
+  (setq dante-tap-type-time 0.2))
+
+
+
 (use-package! evil-cleverparens
   :hook ((emacs-lisp-mode . evil-cleverparens-mode)
          (clojure-mode . evil-cleverparens-mode)
