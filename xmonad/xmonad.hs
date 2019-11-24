@@ -29,6 +29,7 @@ customKeys = [ ("M-[", prevWS)
              , ("M--", incScreenWindowSpacing (-borderDelta))
              , ("M-p", spawn "dmenu_run -nf '#eceff4' -nb '#5e81ac' -sb '#8fbcbb' -sf '#2e3440'")
              , ("M-s", spawn "alacritty -e alsamixer")
+             , ("M-w", kill)
              ]
 
 myLayoutHook = initialSpacing $ layoutHook desktopConfig
