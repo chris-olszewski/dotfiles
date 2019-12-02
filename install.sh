@@ -6,6 +6,7 @@ DIR="$HOME/dotfiles"
 
 #List of files
 BASH_FILES=(bashrc bash_profile)
+ZSH_FILES=(zshrc zshenv)
 MISC_FILES=(tmux.conf inputrc xinitrc alacritty.yml gitconfig)
 
 # TODO: backup files if they exist
@@ -15,6 +16,10 @@ MISC_FILES=(tmux.conf inputrc xinitrc alacritty.yml gitconfig)
 # TODO: don't assume where dotfiles repo is
 for f in "${BASH_FILES[@]}"; do
 	ln -sfT "$DIR/bash/$f" "$HOME/.$f"
+done
+
+for f in "${ZSH_FILES[@]}"; do
+	ln -sfT "$DIR/zsh/$f" "$HOME/.$f"
 done
 
 # Symlink scripts

@@ -1,0 +1,27 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=1000000
+setopt appendhistory autocd extendedglob nomatch notify
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+
+zstyle :compinstall filename '/Users/olszewski/.zshrc'
+
+autoload -Uz compinit promptinit
+# Use command completion
+compinit
+promptinit
+
+prompt bart
+
+# Use fd to switch to cmd mode
+bindkey "fd" vi-cmd-mode
+
+# History searching
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+# TODO figure out C-r C-s bindings
