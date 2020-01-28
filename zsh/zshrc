@@ -1,3 +1,4 @@
+# .zshrc
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -24,4 +25,5 @@ autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-# TODO figure out C-r C-s bindings
+bindkey "^r" up-line-or-beginning-search
+bindkey "^s" down-line-or-beginning-search

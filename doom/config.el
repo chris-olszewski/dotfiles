@@ -8,6 +8,7 @@
 
 ;; If file starts with shebang sh open in sh-mode
 (add-to-list 'magic-mode-alist '("# .bashrc" . sh-mode))
+(add-to-list 'magic-mode-alist '("# .zshrc" . sh-mode))
 
 ;; Remove b prefix for default cargo bindings
 (after! rust-mode
