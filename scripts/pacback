@@ -6,8 +6,8 @@ BACKUP_DIR="$HOME/pacback"
 ROOT_BACKUP="/backup.tar.bz2"
 
 function backup {
-    mkdir -p $BACKUP_DIR
-    pushd $BACKUP_DIR > /dev/null
+    mkdir -p "$BACKUP_DIR"
+    pushd "$BACKUP_DIR" > /dev/null
     FILE="$(date -Iseconds).tar.bz2"
     echo $FILE
     tar cjf "$BACKUP_DIR/$FILE" /var/lib/pacman/local
@@ -28,7 +28,7 @@ SUBCMD=$1
 
 case $SUBCMD in
     "backup") backup;;
-    "restore") restore $2;;
-    "list") ls $BACKUP_DIR;;
+    "restore") restore "$2";;
+    "list") ls "$BACKUP_DIR";;
     *) echo "unknown command";;
 esac
