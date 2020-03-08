@@ -42,8 +42,10 @@ export VISUAL="emacsclient -a \"emacs --daemon\" -c"
 # Editor should point to an editor that doesn't require "advanced" features e.g. ed, vi, etc
 export EDITOR="vi -e"
 export GIT_EDITOR="emacsclient -a \"emacs --daemon\" -c"
+# TODO check if rustc is installed
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Update path
 export PATH="$PATH:$HOME/.emacs.d/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
